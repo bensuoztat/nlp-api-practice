@@ -29,7 +29,7 @@ def health_check():
 
 #POST ile veri alan endpoint
 #payload.text ile metne ulaşmanı sağlar
-@app.post("/predict", response_model=PredictionResponse)
+@app.post("/predict")
 def predict(payload: PredictionRequest): #kullanıcının gönderdiği JSON verisini PredictionRequest şemasına göre otomatik olarak doğrular
     """metin alıp modele ver sent analysis yap sonucu dön """
     logger.info(f"Received text for prediction: {payload.text[:50]}...") #gelen metnin ilk 50 karakterini loglara kaydeder
