@@ -1,5 +1,5 @@
 #model yükle hafızada tut
-"""
+
 from transformers import pipeline
 
 #hf hızlı inglizce sent analysis modeli
@@ -13,8 +13,10 @@ def predictSentiment(text: str): #dışardan metin alıp sent analyisis yapar
         "score": round(float(result["score"]),4) #skoru 4 basmaağa yuvarlar 
         }
 
-"""
 
+
+
+"""
 import requests
 API_URL = "https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english"
 
@@ -37,3 +39,4 @@ def predictSentiment(text: str):
 
     except Exception as e:
         return {"error": str(e)}
+        """
